@@ -1,0 +1,6 @@
+[book]
+authors = ["cdsupina"]
+language = "en"
+multilingual = false
+src = "src"
+title = "Open Rust Bot"
