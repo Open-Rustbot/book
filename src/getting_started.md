@@ -1,5 +1,12 @@
 # Getting Started
 
+## Required Hardware
+
+|Name|Image|Price|Link|
+|---|---|---|---|
+|STM32F103C8T6 Development Board|image|$6.33|[https://amzn.to/32bTqeM](https://amzn.to/32bTqeM)|
+|ST-Link V2|image|$8.60|[https://amzn.to/35wE9qM](https://amzn.to/35wE9qM)|
+
 ## Install 
 
 - Install rust [https://www.rust-lang.org/tools/install](https://www.rust-lang.org/tools/install)
@@ -11,8 +18,13 @@
 ## stm32_starter_rs
 
 To ease the process of starting a new embedded project using Rust. We have created a starter repository called
-stm32_starter_rs. This repository is setup for the STM32f103 microcontroller, but it can easily be configured for other
-STM32 microcontrollers. Now we will proceed to go through each of the files in the directory and their purpose.
+[stm32_starter_rs](https://github.com/Open-Rustbot/stm32_starter_rs). You can clone this repository using the following
+command.
+
+```git clone https://github.com/Open-Rustbot/stm32_starter_rs.git```
+
+This repository is setup for the STM32f103 microcontroller, but it can easily be configured for other
+STM32 microcontrollers. Now we will proceed to go through each of the files in the directory and their explain purpose.
 
 ### `./cargo/config`
 
@@ -23,17 +35,22 @@ STM32 microcontrollers. Now we will proceed to go through each of the files in t
 ### `openocd.gdb`
 
 ## Hello World
-
 After installing the required software we can perform the "Hello World" of the hardware world, a blinking LED.
-To begin, clone the [stm32_starter_rs](https://github.com/Open-Rustbot/stm32_starter_rs) repository.
-
-```git clone https://github.com/Open-Rustbot/stm32_starter_rs.git```
-
 Take a look at
 src/main.rs and make an effort to understand the script.
-When you're finished, open a terminal and navigate to the root of the repository and launch `openocd`.
+
+### Connect the STM32 Microcontroller to Computer
+
+### Launch OpenOCD
+After your microcontroller is connected to your computer using the ST-Link, open a terminal, navigate to the root of the
+repository, and execute `openocd`. You should see an output similar to the screenshot below.
+
+![openocd](../assets/openocd.png)
+
 It is important to be in the same directory of the repository so that openocd can read the openocd.cfg file located in
 the directory.
+
+### Run the Program
 
 In another terminal, navigate to the same directory again and this time execute `cargo run`.
 This will compile the rust source code, flash it onto the microcontroller, and open a gdb prompt. Enter a `c` in the gdb

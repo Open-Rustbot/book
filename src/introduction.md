@@ -14,7 +14,7 @@ different people. The "Embedded Rust Programming" part goes over one concept at 
 difficulty and the "Open Rustbot" part walks through building and programming a rover using Rust. Below is a list of
 required hardware for each section.
 
-### Both Parts
+### Hardware Required for both Parts
 
 |Name|Image|Price|Link|
 |---|---|---|---|
@@ -23,13 +23,13 @@ required hardware for each section.
 
 ### Embedded Rust Programming
 
-
 |Name|Image|Price|Link|
 |---|---|---|---|
 
 ### Open Rustbot
 
-
 |Name|Image|Price|Link|
 |---|---|---|---|
 
+After you have an ST-Link V2 and an STM32f103 development board you should proceed to complete the steps in the
+[Getting Started](./getting_started.html#getting-started) section.
