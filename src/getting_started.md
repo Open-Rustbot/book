@@ -8,10 +8,29 @@
 - Install llvm-tools-preview component `rustup component add llvm-tools-preview`
 - Install openocd and gdb-multiarch using your OS's package manager
 
+## stm32_starter_rs
+
+To ease the process of starting a new embedded project using Rust. We have created a starter repository called
+stm32_starter_rs. This repository is setup for the STM32f103 microcontroller, but it can easily be configured for other
+STM32 microcontrollers. Now we will proceed to go through each of the files in the directory and their purpose.
+
+### `./cargo/config`
+
+### `memory.x`
+
+### `openocd.cfg`
+
+### `openocd.gdb`
+
 ## Hello World
 
 After installing the required software we can perform the "Hello World" of the hardware world, a blinking LED.
-To begin, clone the stm32_starter_rs repository. Take a look at src/main.rs and make an effort to understand the script.
+To begin, clone the [stm32_starter_rs](https://github.com/Open-Rustbot/stm32_starter_rs) repository.
+
+```git clone https://github.com/Open-Rustbot/stm32_starter_rs.git```
+
+Take a look at
+src/main.rs and make an effort to understand the script.
 When you're finished, open a terminal and navigate to the root of the repository and launch `openocd`.
 It is important to be in the same directory of the repository so that openocd can read the openocd.cfg file located in
 the directory.

@@ -10,16 +10,26 @@ This book is separated into two main parts:
 - Open Rustbot
 
 Both parts of this book can be a starting point. However, they offer different learning experiences that may suit
-different people.
+different people. The "Embedded Rust Programming" part goes over one concept at a time with increasing
+difficulty and the "Open Rustbot" part walks through building and programming a rover using Rust. Below is a list of
+required hardware for each section.
 
-The first part of this book uses an STM32f103 "blue pill" microcontroller. Each section of this part will go through
-a new concept and require different components, but all will require the STM32f103 microcontroller. Below is a full
-parts list for each section.
+### Both Parts
+
+|Name|Image|Price|Link|
+|---|---|---|---|
+|STM32F103C8T6 Development Board|image|$6.33|[https://amzn.to/32bTqeM](https://amzn.to/32bTqeM)|
+|ST-Link V2|image|$8.60|[https://amzn.to/35wE9qM](https://amzn.to/35wE9qM)|
+
+### Embedded Rust Programming
 
 
+|Name|Image|Price|Link|
+|---|---|---|---|
 
-This book is separated into two parts. The first part will focus on getting started with using Rust to develop for STM32
-microcontrollers. The second part will walk you through the **Open Rust Bot** kit.
+### Open Rustbot
 
-Throughout this book we will be using the STM32F103 "Blue Pill" development board. This microcontroller was chosen due
-to its availability and low cost. These development boards can be found for as low as $2.00 on AliExpress.
+
+|Name|Image|Price|Link|
+|---|---|---|---|
+
