@@ -1,22 +1,21 @@
 # Getting Started
 
 ## Required Hardware
-
 |Name|Image|Price|Link|
 |---|---|---|---|
 |STM32F103C8T6 Development Board|image|$6.33|[https://amzn.to/32bTqeM](https://amzn.to/32bTqeM)|
 |ST-Link V2|image|$8.60|[https://amzn.to/35wE9qM](https://amzn.to/35wE9qM)|
 
 ## Install 
-
-- Install rust [https://www.rust-lang.org/tools/install](https://www.rust-lang.org/tools/install)
+- Install rust using rustup [https://www.rust-lang.org/tools/install](https://www.rust-lang.org/tools/install)
 - Add the the thumbv7m <sup>[1](#myfootnote1)</sup> target `rustup target add thumbv7m-none-eabi`
-- Install cargo-generate and cargo-binutils `cargo install cargo-generate cargo-binutils`
+- Install cargo-binutils `cargo install cargo-binutils`
 - Install llvm-tools-preview component `rustup component add llvm-tools-preview`
-- Install openocd and gdb-multiarch using your OS's package manager
+- Install the following with your OS's package manager:
+    - openocd
+    - gdb-multiarch
 
 ## stm32_starter_rs
-
 To ease the process of starting a new embedded project using Rust. We have created a starter repository called
 [stm32_starter_rs](https://github.com/Open-Rustbot/stm32_starter_rs). You can clone this repository using the following
 command.
@@ -24,7 +23,9 @@ command.
 ```git clone https://github.com/Open-Rustbot/stm32_starter_rs.git```
 
 This repository is setup for the STM32f103 microcontroller, but it can easily be configured for other
-STM32 microcontrollers. Now we will proceed to go through each of the files in the directory and their explain purpose.
+STM32 microcontrollers. Below we will go over each of the files in the repository. If you are using another STM32
+microcontroller check the [Alternative STM32 Microcontrollers](./alternative.html#configuring-stm32_starter_rs-for-your-microcontroller)
+section of the appendix for all of the necessary file changes for your microcontroller.
 
 ### `./cargo/config`
 

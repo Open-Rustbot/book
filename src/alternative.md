@@ -14,5 +14,30 @@ specifications is the architecture which is listed as ARMv7-M.
 
 ![cortexm3_spec](../assets/cortexm3_spec.png)
 
-This means that the target required for the microcontroller is thumbv7m and I can use the command
+This means that the target required for the microcontroller is "thumbv7m" and I can use the command
 `rustup target add thumbv7m-none-eabi` to add it. Replace "thumbv7m" with your boards instruction set.
+
+## Configuring stm32_starter_rs for your Microcontroller 
+Make the changes listed to the following files:
+
+### `./cargo/config`
+Using the target name you found in the
+[Finding the Correct Target for Your Microcontroller](./alternative.html#finding-the-correct-target-for-your-microcontroller)
+section (should be of the form thumbvxx-none-eabi), replace the two instances of "thumbv7m-none-eabi" with your
+microcontroller's target.
+
+```
+[target.<YOUR TARGET HERE>]
+
+runner = "arm-none-eabi-gdb -q -x openocd.gdb"
+rustflags = ["-C", "link-arg=-Tlink.x"]
+
+[build]
+target = "<YOUR TARGET HERE>"
+```
+
+### `memory.x`
+
+### `openocd.cfg`
+
+### `openocd.gdb`
